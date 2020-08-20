@@ -17,3 +17,4 @@ phases:
 artifacts:
   files:
     - target/helloworld3-0.0.1-SNAPSHOT.war
+    - .ebextensions/**/*
