@@ -10,12 +10,14 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - DEFAULT=`pwd`
       - mvn install
+      - cd $DEFAULT
+      - mv target/helloworld3-0.0.1-SNAPSHOT.war helloworld3.war
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/helloworld3-0.0.1-SNAPSHOT.war
+    - helloworld3.war
     - .ebextensions/**/*
-  base-directory: 'target/'
