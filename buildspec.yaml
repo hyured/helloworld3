@@ -17,6 +17,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/helloworld3-0.0.1-SNAPSHOT.war
+    - my-web-app.war
     - .ebextensions/**/*
-  base-directory: 'target/my-web-app'
+  base-directory: 'target'
