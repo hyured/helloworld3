@@ -11,12 +11,11 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn install
-      - mv target/helloworld3-0.0.1-SNAPSHOT.war my-web-app.war
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - my-web-app.war
+    - target/helloworld3-0.0.1-SNAPSHOT.war my-web-app.war
     - .ebextensions/**/*
-  base-directory: 'target'
+  base-directory: 'target/'
